@@ -2003,10 +2003,10 @@ div.admin-panel,
 }
 
 #secondary-content-wrapper {
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#8BBD95), to(#009854));
-  background-image: -moz-linear-gradient(-90deg, #8BBD95, #009854);
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#8BBD95', endColorstr='#009854')";
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr=#8BBD95,endColorstr=#009854,GradientType=0);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#8BBD95), to(#FEFEFF));
+  background-image: -moz-linear-gradient(-90deg, #8BBD95, #FEFEFF);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#8BBD95', endColorstr='#FEFEFF')";
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr=#8BBD95,endColorstr=#FEFEFF,GradientType=0);
 }
 
 
