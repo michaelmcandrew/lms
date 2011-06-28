@@ -5,17 +5,8 @@
 body {
   color: #666666;
 }
-div#page {
-  background-color: #feffff;
-}
-#header-wrapper {
-  background-color: #feffff;
-}
-#nav-wrapper {
-  background-color: #feffff;
-}
-#breadcrumb-wrapper {
-  background-color: #feffff;
+.block-content { 
+  border: 0 none !important;
 }
 #messages-help-wrapper {
   background-color: #feffff;

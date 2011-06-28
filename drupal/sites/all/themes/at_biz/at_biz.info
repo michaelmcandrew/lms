@@ -13,6 +13,11 @@
   stylesheets[all][] = css/tables.css
   stylesheets[all][] = color/colors.css
   stylesheets[all][] = css/style.css
+  stylesheets[all][] = sf/css/superfish.css
+  stylesheets[all][] = sf/css/theme.css
+
+;----------// Scripts
+  scripts[]          = sf/js/superfish.js
 
 ;----------// Regions
   ; This theme uses Gpanels from Adaptivetheme core (the ones starting with "GP"). 
@@ -20,6 +25,7 @@
   ; and review the Gpanel regions in the sample subthemes .info file.
 
   regions[menu_bar_top]      = Top Menu Bar
+  regions[superfish_menu] = Superfish Menu
   regions[header]            = Header
   regions[menu_bar]          = Main Menu Bar
   regions[help]              = Help

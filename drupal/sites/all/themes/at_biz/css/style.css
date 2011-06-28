@@ -11,6 +11,16 @@ div#page-wrapper {
   margin: 0;
 }
 
+div#page-wrapper {
+  background-color: #000;
+}
+
+div#page {
+  width: 960px;
+  margin: 0 auto;  
+  background-color: #C7E3D4;
+}
+
 /* Featured backgrounds */
 #secondary-content-wrapper,
 #secondary-content-wrapper .image-overlay {
@@ -1943,3 +1953,60 @@ div.admin-panel,
 .quicktabs-style-nostyle ul.quicktabs_tabs li a {
   text-decoration: none;
 }
+/*.....Katy styles.....*/
+.block-content { 
+  border: 0 none !important;
+}
+.region-superfish-menu .block-inner { 
+  margin: 0;
+  width: 100%;
+}
+.region-superfish-menu .block-content-inner { 
+  padding: 0;
+}
+
+#superfish .menu { 
+  background-color: #006600 !important;
+}
+#superfish .menu li:hover, 
+#superfish .menu li.sfHover, 
+#superfish .menu a:focus, 
+#superfish .menu a:hover, 
+#superfish .menu a:active, 
+#superfish .menu a.active {
+	background-color: #8BBD95 !important;
+}
+
+#superfish .menu li li {
+  background: #8BBD95 !important;
+}
+#superfish .menu li li li {
+  background: #8BBD95 !important;
+}
+#superfish .menu li:hover, 
+#superfish .menu li.sfHover,
+#superfish .menu a:focus, 
+#superfish .menu a:hover, 
+#superfish .menu a:active,
+#superfish .menu a.active {
+  background: #8BBD95 !important;
+  outline: 0;
+}
+#superfish .menu li li:hover, 
+#superfish .menu li li.sfHover,
+#superfish .menu li li a:focus, 
+#superfish .menu li li a:hover, 
+#superfish .menu li li a:active,
+#superfish .menu li li a.active {
+  background: #006600 !important;
+  outline: 0;
+}
+
+#secondary-content-wrapper {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#8BBD95), to(#009854));
+  background-image: -moz-linear-gradient(-90deg, #8BBD95, #009854);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#8BBD95', endColorstr='#009854')";
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr=#8BBD95,endColorstr=#009854,GradientType=0);
+}
+
+
