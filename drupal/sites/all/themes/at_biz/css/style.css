@@ -2006,7 +2006,7 @@ div.admin-panel,
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#75AF80), to(#8BBD95));
   background-image: -moz-linear-gradient(-90deg, #75AF80, #8BBD95);
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#75AF80', endColorstr='#8BBD95')";
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr=#8BBD95,endColorstr=#75AF80,GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr=#8BBD95,endColorstr=#75AF80 t,GradientType=0);
 }
  
 
