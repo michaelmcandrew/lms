@@ -1,0 +1,88 @@
+/* AT */
+table {
+  border-spacing: 0;
+  border-color: #eee;
+  margin: 1em 0;
+  padding: 0;
+  width: 100%;
+  font-size: 1em; 
+}
+table,
+tr,
+td,
+thead,
+tbody {
+  border-spacing: 0;
+  border-collapse: collapse;
+  border-width: 0;
+}
+table,
+td,
+th {
+  vertical-align:middle;
+}
+caption,
+th,
+td {
+  text-align:left;
+}
+thead th {
+  border-bottom: 1px solid #EEE;
+  color: #494949;
+  font-weight: 700;
+}
+td,
+th {
+  border-bottom:none;
+  margin: 0;
+  padding: .75em;
+}
+tr.even,
+tr.odd {
+  border-bottom: none;
+}
+tr.odd,
+tr.info {
+  background-color:#F5F5F5;
+}
+tr.even {
+  background-color:#FFF;
+}
+tr.drag {
+  background-color:#FFFFF0;
+}
+tr.drag-previous {
+  background-color:#FFD;
+}
+tr.odd td.active {
+  background-color:#EEE;
+}
+tr.even td.active {
+  background-color:#F7F7F7;
+}
+td.region,
+td.module,
+td.container td.category {
+  background-color:#EEE;
+  border-bottom:1px solid #CCC;
+  border-top:1.5em solid #FFF;
+  color:#222;
+  font-weight:700;
+}
+tr:first-child td.region,
+tr:first-child td.module,
+tr:first-child td.container {
+  border-top-width:0;
+}
+/* Add back Drupal 7's missing forum icon http://drupal.org/node/1008580 */
+#forum tr td.forum {
+  background: url(images/forum-default.png) no-repeat 5px 5px; /* LTR */
+  padding-left: 40px; /* LTR */
+}
+#forum .description {
+  font-size: 0.92em;
+  margin: 5px 0;
+}
+#forum div.indent {
+  margin-left: .5em;
+}
