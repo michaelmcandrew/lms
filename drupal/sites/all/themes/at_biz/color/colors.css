@@ -5,8 +5,17 @@
 body {
   color: #666666;
 }
-.block-content { 
-  border: 0 none !important;
+div#page {
+  background-color: #feffff;
+}
+#header-wrapper {
+  background-color: #feffff;
+}
+#nav-wrapper {
+  background-color: #feffff;
+}
+#breadcrumb-wrapper {
+  background-color: #feffff;
 }
 #messages-help-wrapper {
   background-color: #feffff;

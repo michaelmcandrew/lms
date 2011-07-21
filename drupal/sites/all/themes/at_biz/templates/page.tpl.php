@@ -1,6 +1,5 @@
 <?php // AT Biz ?>
-<div id="page-wrapper">
-	<div id="page">
+<div id="page-wrapper"><div id="page">
 
   <?php if($page['menu_bar_top']): ?>
     <div id="menu-top-wrapper"><div class="container clearfix">
@@ -30,27 +29,20 @@
       <?php print render($page['header']); ?>
 
     </header>
+
+	<script type="text/javascript">
+	  jQuery(document).ready(function() {
+	    jQuery("#menu-bar ul.menu").superfish();
+	  });
+	</script>
+
   </div></div>
 
-
-<script type="text/javascript">
-  jQuery(document).ready(function() {
-    jQuery("#superfish ul.menu").superfish();
-  });
-</script>
-
-<?php if ($page['superfish_menu']): ?>
-  <div id="superfish">
-	  <?php print render ($page['superfish_menu']); ?>
-	</div>
-<?php endif; ?>
-
-
-  <!-- <?php if ($menubar = render($page['menu_bar'])): ?>
+  <?php if ($menubar = render($page['menu_bar'])): ?>
     <div id="nav-wrapper"><div class="container clearfix">
       <?php print $menubar; ?>
     </div></div>
-  <?php endif; ?> -->
+  <?php endif; ?>
 
   <div id="secondary-content-wrapper">
     <div class="image-overlay">
