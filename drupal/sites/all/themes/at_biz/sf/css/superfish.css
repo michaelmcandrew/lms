@@ -30,7 +30,7 @@
 #menu-bar .menu li:hover ul,
 #menu-bar .menu li.sfHover ul {
 	left:			0;
-	top:			36px; /* match top ul list item height */
+	top:			32px; /* match top ul list item height */
 	z-index:		99;
 }
 #menu-bar ul.menu li:hover li ul,

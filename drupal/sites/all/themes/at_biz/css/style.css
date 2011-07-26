@@ -499,6 +499,7 @@ a.active:focus {
   -khtml-border-radius-bottomright: 0;
   -khtml-border-radius-bottomleft: 0;
   border-radius: 4px 4px 0 0;
+  margin-right: 3px;
 }
 
 .rc-8 #nav-wrapper ul li,
@@ -513,6 +514,7 @@ a.active:focus {
   -khtml-border-radius-bottomright: 0;
   -khtml-border-radius-bottomleft: 0;
   border-radius: 8px 8px 0 0;
+  margin-right: 3px;
 }
 
 .rc-12 #nav-wrapper ul li,
@@ -527,6 +529,7 @@ a.active:focus {
   -khtml-border-radius-bottomright: 0;
   -khtml-border-radius-bottomleft: 0;
   border-radius: 12px 12px 0 0;
+  margin-right: 3px;
 }
 
 /* If you have menus deeper than this you should seriously reconsider your site structure... */
