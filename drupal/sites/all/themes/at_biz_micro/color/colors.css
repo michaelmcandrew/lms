@@ -1,0 +1,381 @@
+/* AT Biz Colors
+ * NOTICE: This is a commercial Drupal theme. Elements of this theme including this field
+ * are licensed under a standard commercial license which does not permit redistribution. 
+ */
+body {
+  color: #666666;
+}
+div#page {
+  background-color: #feffff;
+}
+#header-wrapper {
+  background-color: #feffff;
+}
+#nav-wrapper {
+  background-color: #feffff;
+}
+#breadcrumb-wrapper {
+  background-color: #feffff;
+}
+#messages-help-wrapper {
+  background-color: #feffff;
+}
+#secondary-content-wrapper {
+  background-color: #2d97d3; /* fallback for browsers that don't support CSS gradients */
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#2d97d3), to(#66b3df));
+  background-image: -moz-linear-gradient(-90deg, #2d97d3, #66b3df);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#2d97d3', endColorstr='#66b3df')";
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr=#2d97d3,endColorstr=#66b3df,GradientType=0);
+}
+#content-wrapper {
+  background-color: #feffff;
+}
+#tertiary-content-wrapper {
+  background-color: #f3f3f3;
+  border-top: 1px solid #ededed;
+}
+#quadpanel-wrapper {
+  background-color: #feffff;
+}
+#footer-wrapper {
+  background-color: #292929; /* fallback for browsers that don't support CSS gradients */
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#292929), to(#343434));
+  background-image: -moz-linear-gradient(-90deg, #292929, #343434);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#292929', endColorstr='#343434')";
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr=#292929,endColorstr=#343434,GradientType=0);
+}
+
+/* HTML elements */
+blockquote {
+  background: #fdfdff;
+  border-left: 5px solid #ededed;
+}
+
+hr {
+  border-bottom-color: #ededed;
+  border-left: 0;
+  border-right: 0;
+}
+
+/* Links */
+a:link,
+a:visited,
+a:active,
+a.active {
+  color: #2888c1;
+}
+a:hover,
+a:focus {
+  color: #000000;
+}
+
+/* Tables */
+tr.even {
+  background: #ffffff;
+}
+
+/* Header */
+#site-slogan,
+#site-name a,
+.region-header #block-user-login label {
+  color: #666666;
+}
+.nav li a:link,
+.nav li a:visited {
+  color: #fefeff;
+  background: #66b3df;
+}
+.nav li a:hover,
+.nav li a:focus,
+.nav li a:active,
+.nav li a.active,
+.nav li a:visited:hover,
+.nav li.active-trail a {
+  color: #fefeff;
+  background: #2d97d3;
+  text-decoration: none;
+}
+
+/* Form */
+input.form-text,
+textarea {
+  border-color: #ededed;
+}
+
+/* Book nav */
+.book-navigation ul.menu,
+.book-navigation .page-links {
+  border-color: #ededed;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  border: 1px solid #ededed;
+  background: #fdfdff;
+}
+
+/* Footer */
+#footer,
+#footer a {
+  color: #ffffff;
+}
+#footer #block-node-recent {
+  color: #444;
+}
+#footer #block-node-recent a {
+  color: #2888c1;
+}
+
+/* Sidebar */
+.sidebar {
+  background: #feffff;
+}
+
+/* Blocks */
+.block-inner {
+  background: transparent;
+}
+.block-title {
+  background: #fefefe;
+  color: #5d5d5d;
+  border: 1px solid #ededed;
+  border-bottom: 0 none;
+}
+.block-content {
+  background: #fdfdff;
+  border: 1px solid #ededed;
+}
+.block ul li a {
+  color: #232323;
+}
+#main-content .block-content {
+  border: 0;
+  background: #feffff;
+}
+.block .article,
+.block .article-sticky {
+}
+#footer-wrapper .block-title,
+#footer-wrapper a {
+  color: #ffffff;
+}
+
+/* Region blocks */
+.block-menu a,
+.block .item-list a {
+  color: #000000;
+}
+
+/* Poll */
+.poll .bar {
+  background-color: #ffffff;
+  border: solid 1px #f7f7f7;
+}
+.poll .bar .foreground {
+  background-color: #66b3df;
+}
+
+/* Articles */
+.article-teaser {
+  background: #fdfdff;
+  border: 1px solid #ededed;
+}
+.article h2 a:hover {
+  color: #ac2e82;
+}
+.article-teaser .article-footer {
+  border-top: 1px solid #ededed;
+  background: #fdfdff;
+}
+#main-content .article-teaser.article-sticky {
+  background: #fafafa;
+}
+
+/* Fields */
+.field-type-image img {
+  border: 5px solid rgba(255,255,255,0.3);
+}
+
+/* Comments */
+.comment {
+  background: #ffffff;
+}
+.comment footer {
+  color: #666666;
+}
+#comments .odd {
+  background: #f2f2f2;
+}
+
+/* Aggregator */
+#aggregator .feed-source {
+  background-color: #eeeeee;
+  border: 1px solid #ededed;
+}
+
+/* Forum */
+#forum td.container {
+  background: #dddddd;
+}
+#forum thead, 
+#forum tbody {
+  border: none;
+}
+
+/* Profile */
+#profile .profile {
+  border: 1px solid #aaaaaa;
+}
+
+/* Administer */
+div.admin-panel {
+  background: #fdeaf7;
+}
+div.admin-panel h3 {
+  background: #eb5ac3;
+  color: #ffffff;
+}
+
+/* Pager */
+div.item-list ul.pager li {
+  border: 1px solid #ededed;
+}
+div.item-list ul.pager li:hover,
+div.item-list ul.pager li:focus {
+  border: 1px solid #2888c1;
+  color: #2888c1;
+}
+div.item-list ul.pager li.pager-current {
+  border: 1px solid #2888c1;
+  background: #2888c1;
+  color: #ffffff;
+}
+
+/* Local task tabs */
+ul.primary li a {
+  background: #ffffff;
+  border: solid 1px #ededed;
+  font-weight: 700;
+}
+ul.primary li a:hover {
+  background: #ffffff;
+  border: solid 1px #ededed;
+}
+ul.primary li a.active,
+ul.primary li.active a {
+  border: solid 1px #ededed;
+  background: #ededed;
+  color: #000000;
+}
+ul.primary li a.active:hover,
+ul.primary li a.active:focus {
+  border: solid 1px #eb5ac3;
+  background: #ededed;
+  color: #000000;
+}
+ul.secondary li {
+  border-right: 0;
+  line-height: 2em;
+  margin: 0 0 0.5em;
+  padding: 0 1em 0 0;
+}
+
+/* Superfish Skin */
+.sf-menu.sf-style-default li,
+.sf-navbar.sf-style-default {
+  background: transparent;
+}
+.sf-menu.sf-style-default li li {
+  background: #fdfdff;
+}
+.sf-menu.sf-style-default li li li {
+  background: #fdfdff;
+}
+.sf-menu.sf-style-default li:hover,
+.sf-menu.sf-style-default li.sfHover,
+.sf-menu.sf-style-default li.active a,
+.sf-menu.sf-style-default a:focus,
+.sf-menu.sf-style-default a:hover,
+.sf-menu.sf-style-default a:active,
+.sf-navbar.sf-style-default li li {
+}
+.sf-navbar.sf-style-default li ul li ul {
+  background-color: transparent;
+}
+/* .sf-horizontal */
+.sf-menu.sf-horizontal a {
+  border: 0 !important;
+  color: #ffffff !important;
+}
+/* .sf-navbar */
+.sf-navbar.sf-style-default li ul {
+  background-color: transparent !important;
+  width: 100%;
+}
+.sf-navbar > li > ul > li {
+  border-bottom: 1px solid #2888c1;
+}
+/* .sf-vertical */
+/* .sf-vertical */
+.sf-menu.sf-vertical a {
+  border: 0 !important;
+  color: #191919;
+  background: #66b3df;
+}
+.sf-menu.sf-vertical a:hover,
+.sf-menu.sf-vertical a:focus,
+.sf-menu.sf-vertical a:visited:hover {
+  background: #2d97d3;
+}
+
+/* Calendar styles */
+.calendar-calendar div.date-nav {
+  background-color: transparent;
+  color: #2888c1;
+}
+.calendar-calendar div.date-nav a,
+.calendar-calendar div.date-nav h3 {
+  color: #2888c1;
+}
+.calendar-calendar td {
+  color: #181818;
+}
+.calendar-calendar th {
+  background-color: #fdfdff;
+  color: #2888c1;
+  border: 1px solid #ededed;
+}
+.calendar-calendar th.days {
+  background-color: #ffffff;
+  color: #2888c1;
+}
+.calendar-calendar td .inner div.calendar div,
+.calendar-calendar td .inner div.calendar div a,
+.calendar-calendar td .inner div,
+.calendar-calendar td .inner div a {
+  background-color: #fdfdff;
+}
+.calendar-calendar tr td.today,
+.calendar-calendar tr.odd td.today,
+.calendar-calendar tr.even td.today {
+  background-color: #fdfdff;
+}
+.calendar-calendar td.calendar-agenda-hour,
+.calendar-calendar td.calendar-agenda-items,
+.calendar-calendar td.calendar-agenda-hour {
+  border-color: #ededed;
+}
+.view-content .calendar-calendar ul.inline li {
+  border: 1px solid #ededed;
+}
+
+/* Quicktabs */
+.quicktabs-style-nostyle ul.quicktabs_tabs li a {
+  border-bottom: 3px solid #ededed;
+  text-decoration: none;
+}
+.quicktabs-style-nostyle ul.quicktabs_tabs li a:hover,
+.quicktabs-style-nostyle ul.quicktabs_tabs li a:focus,
+.quicktabs-style-nostyle ul.quicktabs_tabs li.active a {
+  border-bottom: 3px solid #66b3df;
+}
