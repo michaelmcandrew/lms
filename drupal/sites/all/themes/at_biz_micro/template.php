@@ -4,7 +4,7 @@
 /**
  * Override or insert variables into the html template.
  */
-function at_biz_micropreprocess_html(&$vars) {
+function at_biz_micro_preprocess_html(&$vars) {
   drupal_add_css(path_to_theme() . '/css/ie-lte-7.css', array(
     'group' => CSS_THEME,
     'browsers' => array(
@@ -24,7 +24,7 @@ function at_biz_micropreprocess_html(&$vars) {
     )
   );
 }
-function at_biz_microprocess_html(&$vars) {
+function at_biz_micro_process_html(&$vars) {
 
   global $theme, $theme_key;
 
@@ -84,7 +84,7 @@ function at_biz_microprocess_html(&$vars) {
 /**
  * Override or insert variables into the page template.
  */
-function at_biz_microprocess_page(&$vars) {
+function at_biz_micro_process_page(&$vars) {
   // Hook into color.module
   if (module_exists('color')) {
     _color_page_alter($vars);
@@ -94,7 +94,7 @@ function at_biz_microprocess_page(&$vars) {
 /**
  * Override or insert variables into the block template.
  */
-function at_biz_micropreprocess_block(&$vars) {
+function at_biz_micro_preprocess_block(&$vars) {
   if ($vars['block']->module == 'superfish' || $vars['block']->module == 'nice_menu') {
     $vars['content_attributes_array']['class'][] = 'clearfix';
   }
