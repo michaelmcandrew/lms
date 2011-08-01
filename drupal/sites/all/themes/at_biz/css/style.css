@@ -1947,5 +1947,4 @@ div.admin-panel,
   text-decoration: none;
 }
 
-
-.media-image { padding: 10px; }
+#content .media-image { padding: 10px; }
