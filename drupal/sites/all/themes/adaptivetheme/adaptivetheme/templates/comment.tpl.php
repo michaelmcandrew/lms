@@ -1,6 +1,3 @@
-<?php
-// $Id: comment.tpl.php,v 1.2.4.7 2010/10/19 22:41:25 jmburnz Exp $
-?>
 <article class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
   <?php print $unpublished; ?>
@@ -36,8 +33,8 @@
     <div class="user-signature"><?php print $signature ?></div>
   <?php endif; ?>
 
-  <?php if (!empty($content['links'])): ?>
-    <nav><?php print render($content['links']); ?></nav>
+  <?php if ($links = render($content['links'])): ?>
+    <nav class="clearfix"><?php print $links; ?></nav>
   <?php endif; ?>
 
 </article>

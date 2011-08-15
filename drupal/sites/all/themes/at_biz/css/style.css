@@ -10,6 +10,9 @@ div#page-wrapper {
   padding: 0; 
   margin: 0;
 }
+.region-highlighted {
+  margin-bottom: 15px;
+}
 
 /* Featured backgrounds */
 #secondary-content-wrapper,
@@ -72,6 +75,12 @@ body.bb-bd #tertiary-content-wrapper .image-overlay {
 
 #columns {
   padding-top: 15px;
+}
+.region-content-aside {
+  margin-bottom: 15px;
+}
+#tertiary-content-wrapper {
+  clear: both;
 }
 
 /* Gpanel margins */
@@ -143,7 +152,7 @@ body.bb-bd #tertiary-content-wrapper .image-overlay {
 
 /* HTML elements */
 html {
-  font-size:75%; /* 16px x 75% = 12px */
+  font-size: 81.3%; /* 13px default */
 }
 body {
   line-height:1.5;
@@ -197,6 +206,7 @@ img {
 /* Books */
 .book-navigation .menu {
   padding: 1.65em;
+  margin: 0;
 }
 
 /* Lists */
@@ -486,7 +496,6 @@ a.active:focus {
 }
 
 /* Nav rounded corners for tabs */
-
 .rc-4 #nav-wrapper ul li,
 .rc-4 #nav-wrapper ul li a {
   -moz-border-radius: 4px 4px 0 0;
@@ -499,7 +508,6 @@ a.active:focus {
   -khtml-border-radius-bottomright: 0;
   -khtml-border-radius-bottomleft: 0;
   border-radius: 4px 4px 0 0;
-  margin-right: 3px;
 }
 
 .rc-8 #nav-wrapper ul li,
@@ -514,7 +522,6 @@ a.active:focus {
   -khtml-border-radius-bottomright: 0;
   -khtml-border-radius-bottomleft: 0;
   border-radius: 8px 8px 0 0;
-  margin-right: 3px;
 }
 
 .rc-12 #nav-wrapper ul li,
@@ -529,7 +536,6 @@ a.active:focus {
   -khtml-border-radius-bottomright: 0;
   -khtml-border-radius-bottomleft: 0;
   border-radius: 12px 12px 0 0;
-  margin-right: 3px;
 }
 
 /* If you have menus deeper than this you should seriously reconsider your site structure... */
@@ -603,11 +609,7 @@ a.active:focus {
   padding: 0;
   overflow: hidden; /* Clearfix */
 }
-.article .submitted > span {
-  display: block;
-  padding: 12px 0;
-  float: left;
-}
+.article .submitted  {}
 .article .submitted img {
   height: 30px;
   border: 7px solid #f5f5f5;
@@ -755,23 +757,6 @@ a.active:focus {
 .region-tertiary-content .block {
   margin: 0;
 }
-
-/* Quicktabs */
-.block-quicktabs .block-inner .block-inner,
-.sidebar .block-quicktabs .block-inner .block-inner {
-  margin: 0;
-}
-.block-quicktabs .block-content,
-.sidebar .block-quicktabs .block-content {
-  background: transparent;
-  border: 0;
-}
-.block-quicktabs .block-content-inner,
-.sidebar .block-quicktabs .block-content-inner {
-  background: transparent;
-  padding: 0;
-}
-
 #block-system-main .block-content {
   padding: 0;
 }
@@ -1035,9 +1020,6 @@ li a:hover {
   margin: 15px 0;
   overflow: hidden;
 }
-#forum td.last-reply {
-  background: none;
-}
 .block-forum h3 {
   margin-bottom: 0.5em;
 }
@@ -1242,7 +1224,7 @@ ul.secondary li {
 }
 ol#crumbs {
   margin: 0;
-  padding: 5px 0;
+  padding: 4px 0;
   overflow: hidden;
 }
 ol#crumbs li {
@@ -1275,8 +1257,6 @@ ul.action-links li a:focus {
 }
 
 /* Views slideshow */
-.view-content .skin-default img {
-}
 .views-slideshow-controls-top,
 .views-slideshow-controls-bottom {
   background-color: rgba(255, 255, 255, 0.6);
@@ -1295,6 +1275,9 @@ ul.action-links li a:focus {
 }
 .views-slideshow-controls-bottom {
   bottom: 15px;
+}
+.views-slideshow-cycle-main-frame-row-item .article-title,
+.views-slideshow-cycle-main-frame-row-item .article-content {
 }
 
 /* Superfish */
@@ -1327,6 +1310,9 @@ ul.sf-horizontal {
 }
 .nav .contextual-links-wrapper {
   display: none;
+}
+.sf-horizontal .sf-with-ul {
+  padding-right: 1.8em;
 }
 /* .sf-navbar - drop down nav bar style */
 ul.sf-navbar {
@@ -1400,7 +1386,12 @@ ul.sf-vertical ul ul ul {
 .sf-vertical li:hover ul,
 .sf-vertical li.sfHover ul {
   left: 100%; /* match ul width */
-  top: 0;
+  top: -1px;
+}
+.sf-vertical li:hover ul a,
+.sf-vertical li.sfHover ul a {
+  padding-left: 10px;
+  padding-right: 5px;
 }
 .sf-vertical a:hover,
 .sf-vertical a:focus {
@@ -1735,7 +1726,7 @@ div.item-list ul.pager li {
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   -khtml-border-radius: 2px;
-  border-radius: 2px; 
+  border-radius: 2px;
 }
 input.form-submit,
 input.form-text,
@@ -1937,6 +1928,26 @@ div.admin-panel,
 }
 
 /* Quicktabs */
+.block-quicktabs .block-inner .block-inner,
+.sidebar .block-quicktabs .block-inner .block-inner {
+  margin: 0;
+}
+.block-quicktabs .block-content,
+.sidebar .block-quicktabs .block-content {
+  background: transparent;
+  border: 0;
+}
+.block-quicktabs .block-content-inner,
+.sidebar .block-quicktabs .block-content-inner {
+  background: transparent;
+}
+.block-quicktabs ul.quicktabs-tabs {
+  margin: 0;
+  padding: 10px 10px 0;
+}
+.block-quicktabs ul.quicktabs-tabs li{
+  margin: 0 5px 0 0;
+}
 .quicktabs-style-nostyle ul.quicktabs_tabs {
   padding: 0;
 }
@@ -1947,4 +1958,82 @@ div.admin-panel,
   text-decoration: none;
 }
 
-#content .media-image { padding: 10px; }
+/* Override image alignment with short codes, 
+   its takes a lot to override the theme settings for image alignment */
+body .image-left,
+body div.image-left,
+body div.image-left .field-type-image {
+  float: left;
+  margin: 4px 15px 0 0;
+  text-align: left;
+  overflow: hidden;
+}
+body .image-left img,
+body div.image-left img,
+body div.image-left .field-type-image img {
+  text-align: left;
+  margin: 0;
+}
+body .image-right,
+body div.image-right,
+body div.image-right .field-type-image {
+  float: right;
+  margin: 4px 0 0 15px;
+  text-align: right;
+  overflow: hidden;
+}
+body .image-right img,
+body div.image-right img,
+body div.image-right .field-type-image img {
+  text-align: right;
+  margin: 0;
+}
+body .image-center,
+body div.image-center,
+body div.image-center .field-type-image {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+body .image-center img,
+body div.image-center img,
+body div.image-center .field-type-image img{
+  text-align: center;
+}
+/* Reset node from image fields */
+form.node-form div.field-type-image,
+form.node-form div.field-type-image img {
+  text-align: left !important;
+}
+form.node-form div.field-type-image img {
+  display: inline !important;
+  margin: 0 !important;
+}
+
+section.breadcrumb,
+#secondary-content-wrapper .block > .block-inner,
+#breadcrumb-wrapper .block > .block-inner,
+#content-wrapper .block > .block-inner,
+#quadpanel-wrapper .block > .block-inner,
+#tertiary-content-wrapper .block > .block-inner {
+  background: transparent;
+  -webkit-box-shadow: 0 3px 3px 3px rgba(0, 0, 0, 0.01);
+  -moz-box-shadow: 0 3px 3px 3px rgba(0, 0, 0, 0.01);
+  box-shadow: 0 3px 3px 3px rgba(0, 0, 0, 0.01);
+}
+.block-quicktabs .block-inner .block-inner,
+.sidebar .block-quicktabs .block-inner .block-inner,
+#block-system-main .block-inner {
+  background: transparent !important;
+  -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
+  -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
+}
+.quicktabs-wrapper .block {
+  margin-bottom: 0;
+}
+
+/* Added for lms */
+.region-secondary-content .block-inner p {margin: 0;}
+.region-secondary-content .block-inner img {line-height: 0;}

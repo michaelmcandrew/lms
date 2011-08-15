@@ -1,4 +1,3 @@
-; $Id: adaptivetheme_admin.info,v 1.2.4.15 2010/10/25 10:02:45 jmburnz Exp $
 
 ;----------// Theme Information
   name        = AT Admin
@@ -68,9 +67,9 @@
   settings[style_schemes]                  = 'style-default.css'
   settings[style_enable_schemes]           = 'off'
 
-; Information added by drupal.org packaging script on 2011-01-13
-version = "7.x-1.0"
+; Information added by drupal.org packaging script on 2011-07-30
+version = "7.x-1.2"
 core = "7.x"
 project = "adaptivetheme"
-datestamp = "1294913108"
+datestamp = "1312035715"
 

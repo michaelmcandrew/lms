@@ -1,11 +1,8 @@
-<?php
-// $Id: page.tpl.php,v 1.2.4.20 2010/12/01 21:47:53 jmburnz Exp $
-?>
 <div id="page" class="container">
 
   <?php print render($page['leaderboard']); ?>
 
-  <header class="clearfix">
+  <header class="clearfix" role="banner">
 
     <?php if ($linked_site_logo): ?>
       <div id="logo"><?php print $linked_site_logo; ?></div>
@@ -47,7 +44,7 @@
       <?php $tag = $title ? 'section' : 'div'; ?>
       <<?php print $tag; ?> id="main-content">
 
-        <?php if ($title || $primary_local_tasks || $secondary_local_tasks || $action_links): ?>
+        <?php if ($title || $primary_local_tasks || $secondary_local_tasks || $action_links = render($action_links)): ?>
           <header>
             <?php print render($title_prefix); ?>
             <?php if ($title): ?>
@@ -63,8 +60,8 @@
                 <?php if ($secondary_local_tasks): ?>
                   <ul class="tabs secondary"><?php print render($secondary_local_tasks); ?></ul>
                 <?php endif; ?>
-                <?php if ($action_links): ?>
-                  <ul class="action-links"><?php print render($action_links); ?></ul>
+                <?php if ($action_links = render($action_links)): ?>
+                  <ul class="action-links"><?php print $action_links; ?></ul>
                 <?php endif; ?>
               </div>
             <?php endif; ?>

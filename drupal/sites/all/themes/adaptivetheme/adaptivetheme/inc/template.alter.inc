@@ -7,7 +7,6 @@ function adaptivetheme_html_head_alter(&$head_elements) {
   );
 }
 
-
 /**
  * Implements hook_form_FORM_ID_alter().
  */

@@ -1,6 +1,3 @@
-<?php
-// $Id: node.tpl.php,v 1.2.4.13 2010/12/03 06:15:05 jmburnz Exp $
-?>
 <article id="article-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
   <?php print $unpublished; ?>
@@ -32,8 +29,8 @@
   ?>
   </div>
 
-  <?php if (!empty($content['links'])): ?>
-    <nav class="clearfix"><?php print render($content['links']); ?></nav>
+  <?php if ($links = render($content['links'])): ?>
+    <nav class="clearfix"><?php print $links; ?></nav>
   <?php endif; ?>
 
   <?php print render($content['comments']); ?>

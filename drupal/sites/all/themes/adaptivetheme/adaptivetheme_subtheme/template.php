@@ -1,5 +1,4 @@
 <?php
-// $Id: template.php,v 1.2.4.8 2010/12/18 06:35:00 jmburnz Exp $
 
 /**
  * Add the Style Schemes if enabled.
@@ -51,7 +50,7 @@ function adaptivetheme_subtheme_process(&$vars, $hook) {
 /* -- Delete this line if you want to use these functions
 function adaptivetheme_subtheme_preprocess_html(&$vars) {
   // Uncomment the folowing line to add a conditional stylesheet for IE 7 or less.
-  // drupal_add_css(path_to_theme() . '/css/ie/ie-lte-7.css', array('weight' => CSS_THEME, 'browsers' => array('IE' => 'lte IE 7', '!IE' => FALSE), 'preprocess' => FALSE));
+  // drupal_add_css(path_to_theme() . '/css/ie/ie-lte-7.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'lte IE 7', '!IE' => FALSE), 'preprocess' => FALSE));
 }
 function adaptivetheme_subtheme_process_html(&$vars) {
 }

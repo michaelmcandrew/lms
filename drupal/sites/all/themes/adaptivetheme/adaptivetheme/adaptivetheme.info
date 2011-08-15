@@ -1,4 +1,3 @@
-; $Id: adaptivetheme.info,v 1.2.4.22 2011/01/13 04:00:57 jmburnz Exp $
 
 ; NOTE - you do not need to enable or modify this theme - instead use
 ; adaptivetheme_subtheme as a starting point for building your own theme.
@@ -15,9 +14,6 @@
   stylesheets[all][] = css/edit-links.css
   stylesheets[all][] = css/layout.css
   stylesheets[all][] = css/messages.css
-
-;----------// jQuery Plugins and JavaScripts
-  scripts[] = js/at.js
 
 ;----------// Regions
   regions[sidebar_first]     = Sidebar first
@@ -65,17 +61,14 @@
   settings[layout_enable_width]            = 'on'
   settings[layout_enable_sidebars]         = 'on'
   settings[layout_enable_method]           = 'on'
-  settings[equal_heights_sidebars]         = 0
-  settings[equal_heights_blocks]           = 0
-  settings[equal_heights_gpanels]          = 0
   settings[horizontal_login_block]         = 0
   settings[horizontal_login_block_enable]  = 'on'
   settings[style_enable_schemes]           = 'off'
   settings[style_schemes]                  = 'style-default.css'
 
-; Information added by drupal.org packaging script on 2011-01-13
-version = "7.x-1.0"
+; Information added by drupal.org packaging script on 2011-07-30
+version = "7.x-1.2"
 core = "7.x"
 project = "adaptivetheme"
-datestamp = "1294913108"
+datestamp = "1312035715"
 

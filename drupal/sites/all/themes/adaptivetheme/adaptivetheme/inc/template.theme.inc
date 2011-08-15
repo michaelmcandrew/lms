@@ -1,5 +1,4 @@
 <?php
-// $Id: template.theme.inc,v 1.1.2.3 2010/10/30 23:13:53 jmburnz Exp $
 
 // Helper function for theming main and secondary variables.
 function _theme_menu_variables($menu, $type) {
@@ -59,10 +58,12 @@ function adaptivetheme_item_list($vars) {
   $title = $vars['title'];
   $type = $vars['type'];
   $attributes = $vars['attributes'];
+
   $output = '<div class="item-list">';
   if (isset($title)) {
     $output .= '<h3>' . $title . '</h3>';
   }
+
   if (!empty($items)) {
     $output .= "<$type" . drupal_attributes($attributes) . '>';
     $num_items = count($items);
@@ -86,25 +87,24 @@ function adaptivetheme_item_list($vars) {
         $data = $item;
       }
       if (count($children) > 0) {
+        // Render nested list.
         $data .= theme_item_list(array('items' => $children, 'title' => NULL, 'type' => $type, 'attributes' => $attributes));
       }
       if (theme_get_setting('extra_item_list_classes')) {
         if ($i & 1) {
-          $attributes['class'] = empty($attributes['class']) ? 'odd' : ($attributes['class'] .' odd');
+          $attributes['class'][] = 'odd';
         }
         else {
-          $attributes['class'] = empty($attributes['class']) ? 'even' : ($attributes['class'] .' even');
+          $attributes['class'][] = 'even';
         }
-      }
-      if (theme_get_setting('extra_item_list_classes')) {
         if ($i == 0) {
-          $attributes['class'] = empty($attributes['class']) ? 'first' : ($attributes['class'] .' first');
+          $attributes['class'][] = 'first';
         }
         if ($i == $num_items - 1) {
-          $attributes['class'] = empty($attributes['class']) ? 'last' : ($attributes['class'] .' last');
+          $attributes['class'][] = 'last';
         }
       }
-      $output .= '<li' . drupal_attributes($attributes) . '>' . $data . "</li>";
+      $output .= '<li' . drupal_attributes($attributes) . '>' . $data . "</li>"; // no new line!
     }
     $output .= "</$type>";
   }
@@ -212,3 +212,31 @@ function adaptivetheme_links($vars) {
   }
   return $output;
 }
+
+/**
+ * Modify the output of theme_field to support HTML5 in AT7.
+ * This has changed due to Views not working correctly with field.tpl.php
+ * overrides in themes: http://drupal.org/node/1034388
+ */
+function adaptivetheme_field($vars) {
+  $output = '';
+
+  // Render the label, if it's not hidden.
+  if (!$vars['label_hidden']) {
+    $output .= '<div class="field-label"' . $vars['title_attributes'] . '>' . $vars['label'] . ':&nbsp;</div>';
+  }
+
+  // Render the items.
+  foreach ($vars['items'] as $delta => $item) {
+    $classes = 'field-item ' . ($delta % 2 ? 'odd' : 'even');
+    $output .= '<div class="' . $classes . '"' . $vars['item_attributes'][$delta] . '>' . drupal_render($item) . '</div>';
+  }
+
+  // Render the top-level wrapper element.
+  $tag = $vars['label_hidden'] ? 'div' : 'section';
+  $output = "<$tag class=\"" . $vars['classes'] . '"' . $vars['attributes'] . '>' . $output . "</$tag>";
+
+  return $output;
+}
+
+

@@ -1,5 +1,4 @@
 <?php
-// $Id: page.tpl.php,v 1.2.4.15 2010/10/17 02:01:11 jmburnz Exp $
 ?>
 <div id="page" class="container">
   <header id="banner" class="clearfix">

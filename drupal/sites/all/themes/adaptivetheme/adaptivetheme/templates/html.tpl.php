@@ -1,9 +1,6 @@
-<?php
-// $Id: html.tpl.php,v 1.1.2.13 2010/12/13 22:03:04 jmburnz Exp $
-?>
 <?php print $doctype; ?>
-<html lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"<?php print $rdf->version . $rdf->namespaces; ?>>
-<head<?php print $rdf->profile; ?>>
+<html lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces; ?>>
+<head<?php print $rdf_profile; ?>>
 <?php print $head; ?>
 <title><?php print $head_title; ?></title>
 <?php print $styles; ?>

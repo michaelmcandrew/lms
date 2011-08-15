@@ -1,6 +1,3 @@
-<?php
-// $Id: aggregator-feed-source.tpl.php,v 1.1.2.1 2010/10/14 05:36:19 jmburnz Exp $
-?>
 <aside class="feed-source">
   <?php if ($source_description): ?>
     <header class="feed-description"><?php print $source_description; ?></header>

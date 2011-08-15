@@ -1,6 +1,3 @@
-<?php
-// $Id: field--taxonomy-term-reference.tpl.php,v 1.1.2.6 2010/10/20 14:34:57 jmburnz Exp $
-?>
 <?php $tag = $label_hidden ? 'div' : 'section'; ?>
 <<?php print $tag; ?> class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
   <?php if (!$label_hidden) : ?>

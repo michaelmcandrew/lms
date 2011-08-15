@@ -1,5 +1,4 @@
 <?php
-// $Id: 5col-5x20.php,v 1.2.4.2 2010/06/24 23:06:47 jmburnz Exp $
 
 /**
  * @file 5col-5x20.php

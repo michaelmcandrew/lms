@@ -1,7 +1,8 @@
 
+;----------// Theme information
   name        = AT Biz
   description = Recolorable multi-column liquid/fixed layout theme. This is a subtheme of <a href="http://drupal.org/project/adaptivetheme">Adaptivetheme</a> - you must first download and install it first. Visit the Settings page to setup your theme - you can change the color, layout and many other settings.
-  version     = 7.x-1.0
+  version     = 7.x-1.1
   core        = 7.x
   engine      = phptemplate
   base theme  = adaptivetheme
@@ -14,10 +15,9 @@
   stylesheets[all][] = color/colors.css
   stylesheets[all][] = css/style.css
 
-;----------// Style-sheets
-  stylesheets[all][] = sf/css/superfish.css
-  scripts[]          = sf/js/superfish.js
-
+;----------// scripts
+  scripts[] = js/eq.js
+  scripts[] = js/eq-gp.js
 
 ;----------// Regions
   ; This theme uses Gpanels from Adaptivetheme core (the ones starting with "GP"). 
@@ -28,33 +28,32 @@
   regions[header]            = Header
   regions[menu_bar]          = Main Menu Bar
   regions[help]              = Help
-  regions[secondary_content] = Featured
-  regions[three_33_first]    = Featured Tri-panel - First
-  regions[three_33_second]   = Featured Tri-panel - Second
-  regions[three_33_third]    = Featured Tri-panel - Third
-  regions[highlight]         = Highlight
-  regions[three_2_33_first]  = Content Tri-panel - First
-  regions[three_2_33_second] = Content Tri-panel - Second
-  regions[three_2_33_third]  = Content Tri-panel - Third
-  regions[two_50_first]      = Main Content Header - First
-  regions[two_50_second]     = Main Content Header - Second
+  regions[secondary_content] = Feature panel
+  regions[three_33_first]    = Sub feature panel (first)
+  regions[three_33_second]   = Sub feature panel (second)
+  regions[three_33_third]    = Sub feature panel (third)
+  regions[highlighted]       = Highlight (content top)
+  regions[three_2_33_first]  = Content top panel (first)
+  regions[three_2_33_second] = Content top panel (second)
+  regions[three_2_33_third]  = Content top panel (third)
+  regions[two_50_first]      = Content header (first)
+  regions[two_50_second]     = Content header (second)
   regions[content]           = Main Content
-  regions[content_aside]     = Aside
+  regions[content_aside]     = Aside (content bottom)
   regions[sidebar_first]     = Sidebar first
   regions[sidebar_second]    = Sidebar second
-  regions[tertiary_content]  = Tertiary
-  regions[four_2_first]      = Quad-panel - First
-  regions[four_2_second]     = Quad-panel - Second
-  regions[four_2_third]      = Quad-panel - Third
-  regions[four_2_fourth]     = Quad-panel - Fourth
-  regions[four_first]        = Footer-panel - First
-  regions[four_second]       = Footer-panel - Second
-  regions[four_third]        = Footer-panel - Third
-  regions[four_fourth]       = Footer-panel - Fourth
+  regions[tertiary_content]  = Tertiary panel
+  regions[four_2_first]      = Quad panel (first)
+  regions[four_2_second]     = Quad panel (second)
+  regions[four_2_third]      = Quad panel (third)
+  regions[four_2_fourth]     = Quad panel (fourth)
+  regions[four_first]        = Footer panel (first)
+  regions[four_second]       = Footer panel (second)
+  regions[four_third]        = Footer panel (third)
+  regions[four_fourth]       = Footer panel (fourth)
   regions[footer]            = Footer
   regions[page_top]          = Page top
   regions[page_bottom]       = Page bottom
-
 
 ;----------// Site Features
   features[] = logo
@@ -92,9 +91,6 @@
   settings[layout_enable_width]            = 'on'
   settings[layout_enable_sidebars]         = 'on'
   settings[layout_enable_method]           = 'on'
-  settings[equal_heights_sidebars]         = 0
-  settings[equal_heights_blocks]           = 0
-  settings[equal_heights_gpanels]          = 0
   settings[horizontal_login_block]         = 0
   settings[horizontal_login_block_enable]  = 'on'  
   settings[enable_styles]                  = 'on'
@@ -105,5 +101,6 @@
   settings[headings_styles_weight]         = 0
   settings[headings_styles_shadow]         = 0
   settings[corner_radius]                  = 'rc-4'
+  settings[ie_corners]                     = 0
   settings[body_background]                = 'bb-dlt'
   settings[menu_bullets]                   = 'mb-dd'

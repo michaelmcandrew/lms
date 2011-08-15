@@ -1,5 +1,4 @@
 <?php
-// $Id: theme-settings.php,v 1.2.4.4 2010/12/18 06:35:00 jmburnz Exp $
 
 /**
  * USAGE:
@@ -18,15 +17,11 @@ function adaptivetheme_subtheme_form_system_theme_settings_alter(&$form, &$form_
   /* -- Delete this line if you want to use Style Schemes
 
   if (theme_get_setting('style_enable_schemes') == 'on') {
-    $form['style'] = array(
+    $form['at']['style'] = array(
       '#type' => 'fieldset',
-      '#title' => t('Style settings'),
-      '#collapsible' => TRUE,
-      '#collapsed' => TRUE,
-      '#weight' => 90,
-      '#description'   => t('Use these settings to modify the style of your theme, such as the color scheme.'),
+      '#title' => t('Style schemes'),
     );
-    $form['style']['style_schemes'] = array(
+    $form['at']['style']['style_schemes'] = array(
       '#type' => 'select',
       '#title' => t('Styles'),
       '#default_value' => theme_get_setting('style_schemes'),
@@ -36,7 +31,7 @@ function adaptivetheme_subtheme_form_system_theme_settings_alter(&$form, &$form_
         // 'my-style.css' => t('My Style'), // Add your schemes, these MUST be placed in your subthemes /schemes directory!
       ),
     );
-    $form['style']['style_enable_schemes'] = array(
+    $form['at']['style']['style_enable_schemes'] = array(
       '#type' => 'hidden',
       '#value' => theme_get_setting('style_enable_schemes'),
     );

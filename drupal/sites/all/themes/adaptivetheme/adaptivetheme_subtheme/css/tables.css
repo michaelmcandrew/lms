@@ -1,5 +1,4 @@
 /** 
- * $Id: tables.css,v 1.1.4.6 2010/12/30 11:17:12 jmburnz Exp $
  */
 
 /* Tables */
@@ -74,7 +73,9 @@ tr:first-child td.container {
   border-top-width: 0;
 }
 #forum tr td.forum {
+  background-image: url(images/forum-default.png);
   background-position: 5px 5px;
+  padding-left: 30px;
 }
 #forum tr td.forum .name {
   padding-left: 5px;

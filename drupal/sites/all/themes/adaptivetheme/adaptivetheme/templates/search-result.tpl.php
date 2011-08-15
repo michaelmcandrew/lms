@@ -1,6 +1,3 @@
-<?php
-// $Id: search-result.tpl.php,v 1.2.4.3 2010/10/14 05:36:19 jmburnz Exp $
-?>
 <li class="search-result">
   <h3 class="title"><a href="<?php print $url; ?>"><?php print $title; ?></a></h3>
   <?php if ($snippet or $info_split): ?>

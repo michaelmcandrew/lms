@@ -132,7 +132,7 @@ textarea {
 }
 
 /* Blocks */
-.block-inner {
+.block .block-inner {
   background: transparent;
 }
 .block-title {
@@ -142,6 +142,10 @@ textarea {
   border-bottom: 0 none;
 }
 .block-content {
+  background: #fdfdff;
+  border: 1px solid #ededed;
+}
+.block-quicktabs > .block-inner  {
   background: #fdfdff;
   border: 1px solid #ededed;
 }
@@ -281,25 +285,25 @@ ul.secondary li {
 }
 
 /* Superfish Skin */
-.sf-menu.sf-style-default li,
-.sf-navbar.sf-style-default {
+.sf-menu.sf-style-none li,
+.sf-navbar.sf-style-none {
   background: transparent;
 }
-.sf-menu.sf-style-default li li {
+.sf-menu.sf-style-none li li {
   background: #fdfdff;
 }
-.sf-menu.sf-style-default li li li {
+.sf-menu.sf-style-none li li li {
   background: #fdfdff;
 }
-.sf-menu.sf-style-default li:hover,
-.sf-menu.sf-style-default li.sfHover,
-.sf-menu.sf-style-default li.active a,
-.sf-menu.sf-style-default a:focus,
-.sf-menu.sf-style-default a:hover,
-.sf-menu.sf-style-default a:active,
-.sf-navbar.sf-style-default li li {
+.sf-menu.sf-style-none li:hover,
+.sf-menu.sf-style-none li.sfHover,
+.sf-menu.sf-style-none li.active a,
+.sf-menu.sf-style-none a:focus,
+.sf-menu.sf-style-none a:hover,
+.sf-menu.sf-style-none a:active,
+.sf-navbar.sf-style-none li li {
 }
-.sf-navbar.sf-style-default li ul li ul {
+.sf-navbar.sf-style-none li ul li ul {
   background-color: transparent;
 }
 /* .sf-horizontal */
@@ -308,7 +312,7 @@ ul.secondary li {
   color: #ffffff !important;
 }
 /* .sf-navbar */
-.sf-navbar.sf-style-default li ul {
+.sf-navbar.sf-style-none li ul {
   background-color: transparent !important;
   width: 100%;
 }
@@ -316,16 +320,31 @@ ul.secondary li {
   border-bottom: 1px solid #2888c1;
 }
 /* .sf-vertical */
-/* .sf-vertical */
 .sf-menu.sf-vertical a {
-  border: 0 !important;
+  border: 0;
   color: #191919;
-  background: #66b3df;
+  background: #ffffff;
+  height: 2.25em;
+  line-height: 2.25em;
+  border-bottom: 1px solid #ededed;
+}
+.sf-menu.sf-vertical > li.last a {
+  border-bottom: 0;
+}
+.sf-menu.sf-vertical li.sf-depth-2.menuparent a,
+.sf-menu.sf-vertical li.sf-depth-3.menuparent a,
+.sf-menu.sf-vertical li.sf-depth-4.menuparent a {
+  border-bottom: 1px solid #ededed;
 }
 .sf-menu.sf-vertical a:hover,
 .sf-menu.sf-vertical a:focus,
 .sf-menu.sf-vertical a:visited:hover {
-  background: #2d97d3;
+  background: #ffffff;
+}
+.sf-menu.sf-vertical ul {
+  border: 1px solid #ededed;
+  border-bottom: 0;
+  background: #ffffff;
 }
 
 /* Calendar styles */
@@ -370,12 +389,22 @@ ul.secondary li {
 }
 
 /* Quicktabs */
-.quicktabs-style-nostyle ul.quicktabs_tabs li a {
+.quicktabs-style-nostyle ul.quicktabs-tabs li a {
   border-bottom: 3px solid #ededed;
   text-decoration: none;
 }
-.quicktabs-style-nostyle ul.quicktabs_tabs li a:hover,
-.quicktabs-style-nostyle ul.quicktabs_tabs li a:focus,
-.quicktabs-style-nostyle ul.quicktabs_tabs li.active a {
+.quicktabs-style-nostyle ul.quicktabs-tabs li a:hover,
+.quicktabs-style-nostyle ul.quicktabs-tabs li a:focus,
+.quicktabs-style-nostyle ul.quicktabs-tabs li.active a {
   border-bottom: 3px solid #66b3df;
+}
+
+/* Form focus */
+textarea:focus,
+.form-text:focus,
+.form-checkbox:focus,
+.form-radio:focus,
+.form-select:focus {
+  border: 1px solid #66b3df;
+  background: #ffffff;
 }

@@ -1,6 +1,4 @@
 <?php
-// $Id: template.php,v 1.2.4.8 2010/10/19 22:41:25 jmburnz Exp $
-
 /**
  * Override or insert variables into page templates.
  */

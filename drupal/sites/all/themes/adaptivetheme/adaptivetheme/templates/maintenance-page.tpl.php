@@ -1,6 +1,3 @@
-<?php
-// $Id: maintenance-page.tpl.php,v 1.2.4.3 2010/10/14 13:43:22 jmburnz Exp $
-?>
 <!DOCTYPE html>
 <html lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>">
 <head>

@@ -1,6 +1,3 @@
-<?php
-// $Id: aggregator-item.tpl.php,v 1.1.2.1 2010/10/14 05:36:19 jmburnz Exp $
-?>
 <article class="feed-item">
   <header>
     <h2 class="title feed-item-title">
