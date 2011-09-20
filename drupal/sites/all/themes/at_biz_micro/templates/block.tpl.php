@@ -10,7 +10,7 @@
     <?php endif; ?>
     <?php print render($title_suffix); ?>
     <div<?php print $content_attributes; ?>>
-      <div class="block-content-inner">
+      <div class="block-content-inner clearfix">
         <?php print $content ?>
       </div>
     </div>

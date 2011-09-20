@@ -1,4 +1,6 @@
-<?php // AT Biz ?>
+<?php
+// AT Biz
+?>
 <div id="page-wrapper"><div id="page">
 
   <?php if($page['menu_bar_top']): ?>
@@ -29,13 +31,6 @@
       <?php print render($page['header']); ?>
 
     </header>
-
-	<script type="text/javascript">
-	  jQuery(document).ready(function() {
-	    jQuery("#menu-bar ul.menu").superfish();
-	  });
-	</script>
-
   </div></div>
 
   <?php if ($menubar = render($page['menu_bar'])): ?>
@@ -108,7 +103,7 @@
         <<?php print $tag; ?> id="main-content">
 
           <?php if ($title || $primary_local_tasks || $secondary_local_tasks || $action_links = render($action_links)): ?>
-            <header class="clearfix">
+            <header class="main-content-header clearfix">
               <?php print render($title_prefix); ?>
               <?php if ($title): ?>
                 <h1 id="page-title"><?php print $title; ?></h1>

@@ -12,9 +12,7 @@ tr,
 td,
 thead,
 tbody {
-  border-spacing: 0;
-  border-collapse: collapse;
-  border-width: 0;
+  border: none;
 }
 table,
 td,
@@ -27,45 +25,50 @@ td {
   text-align:left;
 }
 thead th {
-  border-bottom: 1px solid #EEE;
-  color: #494949;
-  font-weight: 700;
+  border-width:0 0 1px;
+  border-bottom-style: solid;
+  border-bottom-color:#eee;
+  color:#494949;
+  font-weight:700;
 }
 td,
 th {
   border-bottom:none;
-  margin: 0;
-  padding: .75em;
+  margin:0;
+  padding:.375em .5em;
 }
 tr.even,
 tr.odd {
-  border-bottom: none;
+  border-bottom:none;
 }
-tr.odd,
-tr.info {
-  background-color:#F5F5F5;
+tr.odd td,
+tr.info td{
+  background-color:#f5f5f5;
+}
+tbody tr:nth-child(2n+1) td {
+  background-color:#f5f5f5;
 }
 tr.even {
-  background-color:#FFF;
+  background-color:#fff;
 }
 tr.drag {
-  background-color:#FFFFF0;
+  background-color:#fffff0;
 }
 tr.drag-previous {
-  background-color:#FFD;
+  background-color:#ffd;
 }
 tr.odd td.active {
-  background-color:#EEE;
+  background-color:#eee;
 }
 tr.even td.active {
-  background-color:#F7F7F7;
+  background-color:#f7f7f7;
 }
 td.region,
 td.module,
 td.container td.category {
-  background-color:#EEE;
-  border-bottom:1px solid #CCC;
-  border-top:1.5em solid #FFF;
+  background-color:#eee;
+  border-bottom:1px solid #ccc;
+  border-top:1.5em solid #fff;
   color:#222;
   font-weight:700;
 }
@@ -74,10 +77,17 @@ tr:first-child td.module,
 tr:first-child td.container {
   border-top-width:0;
 }
+table caption {
+  text-align: center;
+  text-decoration: underline;
+  font-style: italic;
+}
 /* Add back Drupal 7's missing forum icon http://drupal.org/node/1008580 */
 #forum tr td.forum {
-  background: url(images/forum-default.png) no-repeat 5px 5px; /* LTR */
-  padding-left: 40px; /* LTR */
+  background-image: url(images/forum-default.png);
+  background-position: 5px 5px;
+  background-repeat: no-repeat ;
+  padding-left: 40px;
 }
 #forum .description {
   font-size: 0.92em;

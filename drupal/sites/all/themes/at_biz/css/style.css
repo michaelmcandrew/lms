@@ -465,7 +465,7 @@ a.active:focus {
 .nav ul li,
 #menu-bar ul,
 #menu-bar ul li {
-  margin: 0 4px 0 0;
+  margin: 0 1px 0 0;
   padding: 0;
   list-style: none;
   list-style-image: none;
@@ -478,7 +478,7 @@ a.active:focus {
 }
 .nav ul li a {
   display: block;
-  padding: 0 10px !important;
+  padding: 0 10px;
 }
 .nav .block,
 .nav .block-inner,

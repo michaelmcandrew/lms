@@ -1,39 +1,34 @@
 <?php
-// AT
-
+// AT Biz
 /**
  * Implements hook_form_system_theme_settings_alter().
  *
- * @param $form
+ * @param $form['at']
  *   Nested array of form elements that comprise the form.
- * @param $form_state
+ * @param $form['at']_state
  *   A keyed array containing the current state of the form.
  */
 function at_biz_micro_form_system_theme_settings_alter(&$form, &$form_state)  {
 
   // Create the form using Forms API: http://api.drupal.org/api/7
-  $form['layout']['equal_heights'] = array(
+  $form['at']['layout']['equal_heights'] = array(
     '#prefix' => '<div style="display: none">',
     '#suffix' => '</div>',
   );
-  $form['breadcrumb_settings']['breadcrumb']['breadcrumb_separator'] = array(
+  $form['at']['breadcrumb']['breadcrumb_separator'] = array(
     '#prefix' => '<div style="display: none">',
     '#suffix' => '</div>',
   );
   if (theme_get_setting('enable_styles') == 'on') {
-    $form['styles'] = array(
+    $form['at']['font'] = array(
       '#type' => 'fieldset',
-      '#title' => t('Style settings'),
-      '#collapsible' => FALSE,
-      '#collapsed' => FALSE,
+      '#title' => t('Font settings'),
     );
-    $form['styles']['font'] = array(
+    $form['at']['font'] = array(
       '#type' => 'fieldset',
       '#title' => t('Font and Headings settings'),
-      '#collapsible' => TRUE,
-      '#collapsed' => TRUE,
     );
-    $form['styles']['font']['font_family'] = array(
+    $form['at']['font']['font_family'] = array(
       '#type' => 'select',
       '#title' => t('Font family'),
       '#default_value' => theme_get_setting('font_family'),
@@ -47,7 +42,7 @@ function at_biz_micro_form_system_theme_settings_alter(&$form, &$form_state)  {
         'ff-l'   => t('Lucida Sans, Lucida Grande, Lucida Sans Unicode, Verdana, Geneva, sans-serif'),
       ),
     );
-    $form['styles']['font']['headings_font_family'] = array(
+    $form['at']['font']['headings_font_family'] = array(
       '#type' => 'select',
       '#title' => t('Headings Font family'),
       '#default_value' => theme_get_setting('headings_font_family'),
@@ -61,7 +56,7 @@ function at_biz_micro_form_system_theme_settings_alter(&$form, &$form_state)  {
         'hff-l'   => t('Lucida Sans, Lucida Grande, Lucida Sans Unicode, Verdana, Geneva, sans-serif'),
       ),
     );
-    $form['styles']['font']['font_size'] = array(
+    $form['at']['font']['font_size'] = array(
       '#type' => 'select',
       '#title' => t('Base Font Size'),
       '#default_value' => theme_get_setting('font_size'),
@@ -76,39 +71,35 @@ function at_biz_micro_form_system_theme_settings_alter(&$form, &$form_state)  {
         'fs-16' => t('1.333em'),
       ),
     );
-    $form['styles']['font']['headings_styles'] = array(
+    $form['at']['font']['headings_styles'] = array(
       '#type' => 'fieldset',
       '#title' => t('Heading Styles'),
       '#description' => t('Add extra styles to headings. Shadows only work for CSS3 capable browsers such as Firefox, Safari, IE9 etc.'),
-      '#collapsible' => FALSE,
-      '#collapsed' => FALSE,
     );
-    $form['styles']['font']['headings_styles']['headings_styles_caps'] = array(
+    $form['at']['font']['headings_styles']['headings_styles_caps'] = array(
       '#type' => 'checkbox',
       '#title' => t('All Caps'),
       '#default_value' => theme_get_setting('headings_styles_caps'),
     );
-    $form['styles']['font']['headings_styles']['headings_styles_weight'] = array(
+    $form['at']['font']['headings_styles']['headings_styles_weight'] = array(
       '#type' => 'checkbox',
       '#title' => t('Font weight normal'),
       '#default_value' => theme_get_setting('headings_styles_weight'),
     );
-    $form['styles']['font']['headings_styles']['headings_styles_shadow'] = array(
+    $form['at']['font']['headings_styles']['headings_styles_shadow'] = array(
       '#type' => 'checkbox',
       '#title' => t('Text shadows'),
       '#default_value' => theme_get_setting('headings_styles_shadow'),
     );
-    $form['styles']['corners'] = array(
+    $form['at']['corners'] = array(
       '#type' => 'fieldset',
-      '#title' => t('Rounded corner settings'),
-      '#collapsible' => TRUE,
-      '#collapsed' => TRUE,
+      '#title' => t('Rounded corners'),
     );
-    $form['styles']['corners']['corner_radius'] = array(
+    $form['at']['corners']['corner_radius'] = array(
       '#type' => 'select',
       '#title' => t('Corner radius'),
       '#default_value' => theme_get_setting('corner_radius'),
-      '#description' => t('Change the corner radius for blocks, node teasers and comments.'),
+      '#description' => t('Change the corner radius for main menu tabs, blocks, node teasers and comments.'),
       '#options' => array(
         'rc-0' => t('none'),
         'rc-4' => t('4px'),
@@ -116,15 +107,23 @@ function at_biz_micro_form_system_theme_settings_alter(&$form, &$form_state)  {
         'rc-12' => t('12px'),
       ),
     );
-    $form['styles']['pagestyles'] = array(
+    $form['at']['corners']['htc'] = array(
+      '#type' => 'fieldset',
+      '#title' => t('IE corners'),
+    );
+    $form['at']['corners']['htc']['ie_corners'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Enable rounded corners for Internet Explorer 6, 7 and 8'),
+      '#default_value' => theme_get_setting('ie_corners'),
+      '#description' => t('<p>NOTE: For this to work you must download install the <a href="!link">CSS3PIE</a> library to <code>sites/all/libraries/PIE</code>.</p><p>The path should be like this: <code>sites/all/libraries/PIE/PIE.php</code></p><p>Usage is at your own risk. Elements such as text inside other JS items such as drop menus or slideshows may be degraded in Internet Explorer.</p>', array('!link' => 'http://css3pie.com/')),
+    );
+    $form['at']['pagestyles'] = array(
       '#type' => 'fieldset',
       '#title' => t('Page style'),
-      '#collapsible' => TRUE,
-      '#collapsed' => TRUE,
     );
-    $form['styles']['pagestyles']['body_background'] = array(
+    $form['at']['pagestyles']['body_background'] = array(
       '#type' => 'select',
-      '#title' => t('Featured overlays'),
+      '#title' => t('Background overlay'),
       '#default_value' => theme_get_setting('body_background'),
       '#description' => t('This setting adds a texture or pattern over the main background color.'),
       '#options' => array(
@@ -138,13 +137,11 @@ function at_biz_micro_form_system_theme_settings_alter(&$form, &$form_state)  {
         'bb-bd'  => t('Big dots'),
       ),
     );
-    $form['styles']['menu_styles'] = array(
+    $form['at']['menu_styles'] = array(
       '#type' => 'fieldset',
       '#title' => t('Menu Styles'),
-      '#collapsible' => TRUE,
-      '#collapsed' => TRUE,
     );
-    $form['styles']['menu_styles']['menu_bullets'] = array(
+    $form['at']['menu_styles']['menu_bullets'] = array(
       '#type' => 'select',
       '#title' => t('Menu Bullets'),
       '#default_value' => theme_get_setting('menu_bullets'),
@@ -160,4 +157,11 @@ function at_biz_micro_form_system_theme_settings_alter(&$form, &$form_state)  {
       ),
     );
   } // endif styles
+  // Collapse all other forms.
+  $form['theme_settings']['#collapsible'] = TRUE;
+  $form['theme_settings']['#collapsed'] = TRUE;
+  $form['logo']['#collapsible'] = TRUE;
+  $form['logo']['#collapsed'] = TRUE;
+  $form['favicon']['#collapsible'] = TRUE;
+  $form['favicon']['#collapsed'] = TRUE;
 }
